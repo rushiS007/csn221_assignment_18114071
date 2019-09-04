@@ -1,0 +1,42 @@
+Name – Rushiprasad Sanjiv Sagare
+Enrollment No. – 18114071 
+Batch – O3
+CSN -221 Assignment 2 
+
+
+-----------------------------------
+
+mov r1,2 
+.loop1: 
+    mov r4,0 
+    mov r2,1 
+    .loop2: 
+        add r3,r2,1 
+        mul r5,r2,r2 
+        mul r5,r5,r2 
+        .loop3: 
+            mul r6,r3,r3  
+            mul r6,r6,r3 
+            add r7,r5,r6 
+            cmp r7,r1 
+            beq .foo2 
+            .foo3: 
+            add r3,r3,1 
+            mul r6,r3,r3  
+            mul r6,r6,r3 
+            cmp r1,r6 
+            bgt .loop3 
+    add r2,r2,1 
+    mul r5,r2,r2 
+    mul r5,r5,r2 
+    cmp r1,r5 
+    bgt .loop2 
+cmp r4,2 
+beq .foo1 
+add r1,r1,1 
+b.loop1 
+.foo1: 
+    exit 
+.foo2: 
+    add r4,r4,1 
+    b.foo3 
